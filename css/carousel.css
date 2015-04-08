@@ -43,8 +43,17 @@ body {
   margin-bottom: 60px;
 }
 /* Since positioning the image, we need to help out the caption */
+
 .carousel-caption {
   z-index: 10;
+}
+
+@media screen and (min-width: 768px) {
+  .carousel-caption {
+  left:15%;
+  right:15%;
+  padding-bottom:10px;
+}
 }
 
 /* Declare heights because of positioning of img element */
