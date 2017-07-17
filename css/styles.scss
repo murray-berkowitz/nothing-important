@@ -35,6 +35,10 @@ img {
     transform:translateY(-50%);
 }
 
+.title {
+    margin-bottom:20px;
+}
+
 .inline{
     display:inline-block;
 }
@@ -104,11 +108,14 @@ img {
         max-height:60vh;
         .copy {
             text-align: left;
+            p{
+                margin-bottom:15px;
+            }
         }
     }
     @extend .content-section;
     .wrapper {
-        padding:1% 0;
+        padding:2% 0;
         .image-col {
             @extend .center;
             height:100%;

@@ -79,6 +79,10 @@ img {
   transform: translateY(-50%);
 }
 
+.title {
+  margin-bottom: 20px;
+}
+
 .inline, .cta, .navBar .logo-container, .navBar .logo-container p, .navBar .navItems {
   display: inline-block;
 }
@@ -150,8 +154,12 @@ img {
   text-align: left;
 }
 
+.noodle-search.noodle-companies .copy p, .noodle-markets.noodle-companies .copy p, .noodle-partners.noodle-companies .copy p, .noodle-pros.noodle-companies .copy p, .noodle-companies.noodle-companies .copy p {
+  margin-bottom: 15px;
+}
+
 .noodle-search .wrapper, .noodle-markets .wrapper, .noodle-partners .wrapper, .noodle-pros .wrapper, .noodle-companies .wrapper {
-  padding: 1% 0;
+  padding: 2% 0;
 }
 
 .noodle-search .wrapper .image-col, .noodle-markets .wrapper .image-col, .noodle-partners .wrapper .image-col, .noodle-pros .wrapper .image-col, .noodle-companies .wrapper .image-col {
