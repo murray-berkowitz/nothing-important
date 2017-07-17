@@ -1,0 +1,171 @@
+@for $i from 2 through 11 {
+	.span#{$i} {
+		$x : 12/$i;
+        width: ((100-$x+1)/$x)*1%;
+        float:left;
+	}
+}
+
+.span12 {
+    width:100%;
+    float:left;
+}
+.rel {
+    position:relative;
+}
+.center {
+    text-align: center;
+}
+.abs {
+    position: absolute;
+}
+
+.col {
+    margin-left:1%;
+}
+
+img {
+    max-width:100%;
+    max-height:100%;
+}
+
+.vertical-align {
+    @extend .rel;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.inline{
+    display:inline-block;
+}
+.overflow-hide {
+    overflow: hidden;
+}
+.content-section {
+    @extend .rel;
+    height:45vh;
+    padding:0 17px;
+    //margin-bottom:2em;
+}
+
+.cta {
+    @extend .inline;
+    margin:1em 0;
+    border:1px solid black;
+    box-sizing: content-box;
+
+    a {
+        padding:8px 12px;
+        display:block;
+    }
+}
+
+.wrapper {
+    max-width:980px;
+    margin:0 auto;
+    height:100%;
+}
+
+.navBar {
+    padding:8px 14px;
+    max-height:8vh;
+    @extend .rel;
+    z-index: 2;
+    .logo-container {
+        @extend .inline;
+        width:230px;
+        img {
+            width:50px;
+            margin-right:10px;
+        }
+        p {
+            @extend .inline;
+            font-size:12px;
+        }
+    }
+    .navItems {
+        @extend .inline;
+        a {
+            padding:0 1em;
+            text-decoration: underline;
+            &:last-child {
+                border:none;
+            }
+            border-right:1px solid #00bfe7;
+        }
+    }
+}
+
+
+.noodle-search, .noodle-markets, .noodle-partners, .noodle-pros, .noodle-companies {
+    &.noodle-search, &.noodle-markets {
+        background-color:#F6F6F6;
+    }
+    &.noodle-companies {
+        max-height:60vh;
+        .copy {
+            text-align: left;
+        }
+    }
+    @extend .content-section;
+    .wrapper {
+        padding:1% 0;
+        .image-col {
+            @extend .center;
+            height:100%;
+            overflow: hidden;
+            .vertical-align {
+                height:100%;
+                img {
+                    max-height:100%;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        .copy {
+            padding:.5em 1em;
+            height:100%;
+            @extend .rel;
+            @extend .center;
+            img {
+                width:300px;
+                margin-bottom:1.5em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:900px){
+    .span6 {
+        width:100%;
+    }
+    .vertical-align {
+        top:0;
+        transform: translateY(0);
+    }
+    .copy {
+        p {
+            font-size:14px;
+        }
+        img {
+            width:175px!important;
+        }
+    }
+    .content-section {
+        height:auto;
+    }
+    .image-col {
+        img {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width:484px){
+    .image-col {
+        img {
+            display: none;
+        }
+    }
+}
