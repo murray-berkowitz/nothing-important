@@ -179,8 +179,11 @@ img {
 }
 
 @media screen and (max-width: 900px) {
-  .span6 {
+  .span6, .span7 {
     width: 100%;
+  }
+  .title {
+    text-align: center;
   }
   .vertical-align {
     top: 0;
@@ -198,10 +201,7 @@ img {
   .image-col img {
     display: none;
   }
-}
-
-@media screen and (max-width: 484px) {
-  .image-col img {
+  .building-block {
     display: none;
   }
 }
