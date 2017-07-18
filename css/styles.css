@@ -300,6 +300,9 @@ img {
     top: 0;
     left: 0;
   }
+  .navBar .navItems {
+    display: none;
+  }
 }
 
 /*FOR MOBILE VIEW TRY THIS BEFORE + ADD APPROPRIATE BG IMAGE
