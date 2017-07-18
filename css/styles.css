@@ -153,7 +153,8 @@ img {
 .navBar .navItems a {
   padding: 0 1em;
   text-decoration: underline;
-  border-right: 1px solid #00bfe7;
+  color: #58585B;
+  border-right: 1px solid #58585B;
 }
 
 .navBar .navItems a:last-child {
@@ -216,7 +217,8 @@ img {
 .footer .navItems a {
   padding: 0 1em;
   text-decoration: underline;
-  border-right: 1px solid #00bfe7;
+  border-right: 1px solid #58585B;
+  color: #58585B;
 }
 
 .footer .navItems a:last-child {
@@ -227,7 +229,7 @@ img {
   font-weight: bold;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 780px) {
   .span6, .span8 {
     width: 100%;
   }
