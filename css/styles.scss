@@ -16,6 +16,9 @@
 .center {
     text-align: center;
 }
+.right {
+    text-align: right;
+}
 .abs {
     position: absolute;
 }
@@ -37,6 +40,7 @@ img {
 
 .title {
     margin-bottom:20px;
+    font-size:48px;
 }
 
 .inline{
@@ -47,7 +51,7 @@ img {
 }
 .content-section {
     @extend .rel;
-    height:45vh;
+    height:50vh;
     padding:0 17px;
     //margin-bottom:2em;
 }
@@ -57,9 +61,20 @@ img {
     margin:1em 0;
     border:1px solid black;
     box-sizing: content-box;
+    width:165px;
     a {
         padding:8px 12px;
         display:block;
+    }
+    &:hover {
+        background-color:#00bfe7;
+        transition: all .075s linear;
+
+        a {
+            color:white;
+            text-decoration: none;
+            transition: all .075s linear;
+        }
     }
 }
 
@@ -67,6 +82,7 @@ img {
     max-width:980px;
     margin:0 auto;
     height:100%;
+    overflow: hidden;
 }
 
 .navBar {
@@ -135,19 +151,42 @@ img {
             @extend .rel;
             @extend .center;
             img {
-                width:300px;
+                width:50%;
                 margin-bottom:1.5em;
             }
         }
     }
 }
 
+.footer {
+    background-color:rgb(248,248,248);
+    padding:1em 0;
+    .navItems {
+        @extend .inline;
+        a {
+            padding:0 1em;
+            text-decoration: underline;
+            &:last-child {
+                border:none;
+            }
+            border-right:1px solid #00bfe7;
+        }
+        padding-bottom:.5em
+    }
+    .copyright {
+        p {
+            font-weight:bold;
+        }
+    }
+}
+
 @media screen and (max-width:900px){
-    .span6, .span7 {
+    .span6, .span8 {
         width:100%;
     }
     .title {
         text-align: center;
+        font-size:42px;
     }
     .vertical-align {
         top:0;
@@ -171,6 +210,56 @@ img {
     }
     .building-block {
         display: none;
+    }
+    #pros, #companies{
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right center;
+    }
+    #markets, #search {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left center;
+    }
+    #partners {
+        background-image: url('../img/chairs.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 600% center;
+    }
+    #pros {
+        background-image:url('../img/brain.jpg');
+    }
+    #companies {
+        background-image: url('../img/blue-block.png')
+    }
+    #markets {
+        background-image: url('../img/microscope.jpg');
+    }
+    #search {
+        background-image: url('../img/globe-gray.jpg');
+    }
+    #partners, #pros, #companies {
+        &:before {
+            content: '';
+            background-color: rgba(255,255,255,.875);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+    }
+    #search, #markets{
+        &:before {
+            content: '';
+            background-color: rgba(248,248,248,.825);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
     }
 }
 
