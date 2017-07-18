@@ -96,7 +96,12 @@ img {
   overflow: hidden;
 }
 
-.content-section, .noodle-search, .noodle-markets, .noodle-partners, .noodle-pros, .noodle-companies {
+.noodle-search {
+  height: 58vh;
+  padding: 0 17px;
+}
+
+.content-section, .noodle-markets, .noodle-partners, .noodle-pros, .noodle-companies {
   height: 50vh;
   padding: 0 17px;
 }
