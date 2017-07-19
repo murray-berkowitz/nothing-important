@@ -240,7 +240,7 @@ img {
   }
   .title {
     text-align: center;
-    font-size: 42px;
+    font-size: 32px;
   }
   .vertical-align {
     top: 0;
@@ -254,6 +254,7 @@ img {
   }
   .content-section, .noodle-search, .noodle-markets, .noodle-partners, .noodle-pros, .noodle-companies {
     height: auto;
+    max-height:none!important;
   }
   .image-col img {
     display: none;
